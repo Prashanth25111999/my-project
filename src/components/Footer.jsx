@@ -1,91 +1,62 @@
 import React from "react";
-import { FaLinkedin, FaInstagram, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { FaLinkedin, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-blue-950 text-white pt-12 pb-6 px-4">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* About */}
-        <div>
-          <h2 className="text-xl font-bold mb-4">About Us</h2>
-          <p className="text-sm">
-            The future of marketing belongs to those who turn data into
-            information, information into insights, and insights into
-            customer-driven strategies.
-          </p>
-          <p className="text-sm mt-2">
-            We believe in consistent innovation, and a customer-first mindset
-            while maintaining the highest quality datasets.
-          </p>
-          <p className="text-sm mt-2">
-            Our team ensures the upkeep of billions of records for your growth.
-          </p>
-        </div>
+    <footer className="bg-white text-gray-700 pt-10 pb-6 px-4 shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Social & Site Name */}
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <h2 className="text-2xl font-bold text-blue-800">Octane Data</h2>
 
-        {/* Contact Info */}
-        <div>
-          <h2 className="text-xl font-bold mb-4">Headquarters</h2>
-          <p className="text-sm">
-            2150 SOUTH, 1300 EAST, 500 PMB #1771,
-            <br />
-            SALT LAKE CITY, UT 84106
-            <br />
-            UNITED STATES
-          </p>
-          <p className="text-sm mt-2">Phone: 646-461-2757</p>
-          <p className="text-sm">Email: info@galileodata.us</p>
-        </div>
-
-        {/* Social */}
-        <div>
-          <h2 className="text-xl font-bold mb-4">Follow Us On</h2>
-          <div className="flex space-x-4">
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-blue-400"
-            >
-              <FaLinkedin size={24} />
+          {/* Social Icons */}
+          <div className="flex space-x-5 text-xl">
+            <a href="#" className="hover:text-sky-500 transition">
+              <FaTwitter />
             </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-pink-400"
-            >
-              <FaInstagram size={24} />
+            <a href="#" className="hover:text-blue-600 transition">
+              <FaFacebook />
             </a>
-            <a
-              href="https://www.youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-red-500"
-            >
-              <FaYoutube size={24} />
+            <a href="#" className="hover:text-pink-500 transition">
+              <FaInstagram />
+            </a>
+            <a href="#" className="hover:text-blue-400 transition">
+              <FaLinkedin />
             </a>
           </div>
         </div>
-      </div>
-      {/* Bottom Footer */}
-      <div className="border-t border-gray-700 mt-8 pt-4 text-center text-sm">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6">
+
+        {/* Footer Navigation Links */}
+        <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+          <Link to="/terms" className="hover:underline">
+            Terms & Conditions
+          </Link>
+          <Link to="/privacy" className="hover:underline">
+            Privacy Policy
+          </Link>
+          <Link to="/contact" className="hover:underline">
+            Contact Us
+          </Link>
+        </div>
+
+        {/* Copyright & Credits */}
+        <div className="text-center text-xs text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} My Company. All rights reserved.
+            &copy; {new Date().getFullYear()} <strong>Octane Data</strong>. All
+            Rights Reserved.
           </p>
-          <div className="flex gap-4 items-center text-center">
-            <a href="/terms" className="hover:underline">
-              Terms & Conditions
+          {/* <p className="mt-1">
+            Designed by{" "}
+            <a
+              href="https://bootstrapmade.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-gray-700"
+            >
+              BootstrapMade
             </a>
-            <span>|</span>
-            <a href="/privacy" className="hover:underline">
-              Privacy Policy
-            </a>
-            <span>|</span>
-            <a href="/contact" className="hover:underline">
-              Contact Us
-            </a>
-          </div>
+          </p> */}
         </div>
       </div>
     </footer>

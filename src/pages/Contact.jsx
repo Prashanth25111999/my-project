@@ -22,7 +22,7 @@ const Contact = () => {
             </div>
             <div>
               <h4 className="font-semibold">General Enquiries</h4>
-              <p>info@execela.com</p>
+              <p>info@octanedb.com</p>
             </div>
             <div>
               <h4 className="font-semibold">Business Phone</h4>
